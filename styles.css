@@ -292,6 +292,16 @@ img, svg { display: block; }
   flex: 0 0 210px; border: 6px solid #0a0f1c; border-radius: 26px;
   box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .6);
 }
+/* Marco de navegador para los vídeos en horizontal: una barra con tres puntos */
+.project__media--browser {
+  margin-bottom: 18px; border: 1px solid var(--line);
+  padding-top: 22px; position: relative; background: var(--paper);
+}
+.project__media--browser::before {
+  content: ""; position: absolute; top: 8px; left: 12px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--coral); box-shadow: 12px 0 0 var(--highlight), 24px 0 0 var(--sea);
+}
 .project__links { margin-top: auto; padding-top: 18px; display: flex; gap: 18px; }
 .project__links a { font-weight: 600; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
 .project__links a:hover { color: var(--coral); }
