@@ -283,13 +283,24 @@ img, svg { display: block; }
 .project__points { margin: 0 0 18px; padding-left: 1.1em; }
 .project__points li { margin-bottom: 4px; }
 /* Vídeos de los proyectos */
-.project--featured { flex-direction: row; align-items: center; gap: 36px; }
-.project__content { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+/* La tarjeta destacada se parte en dos: a la izquierda un "escenario" de color que ocupa
+   toda la altura con el móvil centrado, y a la derecha el texto. Así no queda hueco vacío. */
+.project--featured {
+  display: grid; grid-template-columns: minmax(280px, 1fr) 1.25fr;
+  padding: 0; overflow: hidden;
+}
+.project__stage {
+  display: grid; place-items: center; padding: 32px;
+  background:
+    radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--sea) 55%, transparent), transparent 70%),
+    color-mix(in srgb, var(--sea) 25%, var(--ink));
+}
+.project__content { display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 32px; }
 .project__media { border-radius: 14px; overflow: hidden; background: #000; }
 .project__media video { display: block; width: 100%; height: auto; }
 /* Marco de móvil para los vídeos en vertical */
 .project__media--phone {
-  flex: 0 0 210px; border: 6px solid #0a0f1c; border-radius: 26px;
+  width: 230px; border: 6px solid #0a0f1c; border-radius: 26px;
   box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .6);
 }
 /* Marco de navegador para los vídeos en horizontal: una barra con tres puntos */
@@ -384,7 +395,9 @@ img, svg { display: block; }
   .projects { grid-template-columns: 1fr; }
   .project { padding: 22px; }
   .project--featured h3 { font-size: 2rem; }
-  .project--featured { flex-direction: column; align-items: stretch; gap: 24px; }
-  .project__media--phone { flex: none; width: min(220px, 70%); margin: 0 auto; }
+  .project--featured { grid-template-columns: 1fr; padding: 0; }
+  .project__stage { padding: 24px; }
+  .project__content { padding: 22px; }
+  .project__media--phone { width: min(220px, 70%); }
   .job { grid-template-columns: 1fr; gap: 6px; }
 }
