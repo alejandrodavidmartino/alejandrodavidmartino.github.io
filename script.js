@@ -68,5 +68,32 @@ const sectionObserver = new IntersectionObserver(
 );
 document.querySelectorAll("main section[id]").forEach((s) => sectionObserver.observe(s));
 
+// ---------- Vídeos de los proyectos ----------
+// Solo se reproducen mientras se ven en pantalla (ahorra batería en el móvil).
+// Si el sistema pide "reducir movimiento", se quedan en pausa con controles.
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const videos = document.querySelectorAll(".project__media video");
+
+videos.forEach((video) => {
+  if (reduceMotion) {
+    video.removeAttribute("autoplay");
+    video.pause();
+    video.controls = true;
+  }
+});
+
+if (!reduceMotion) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.play().catch(() => {}); // algunos navegadores bloquean el autoplay: no pasa nada
+      } else {
+        entry.target.pause();
+      }
+    });
+  });
+  videos.forEach((video) => videoObserver.observe(video));
+}
+
 // ---------- Año del pie de página ----------
 document.getElementById("year").textContent = new Date().getFullYear();

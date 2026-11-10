@@ -206,6 +206,13 @@
       </header>
       <div class="entry__body projects">
         <article class="project project--featured">
+          <!-- muted + playsinline: sin ellos, los navegadores (sobre todo en iPhone) no dejan reproducir solo -->
+          <div class="project__media project__media--phone">
+            <video src="assets/videos/atraquen-el-barco.mp4" poster="assets/videos/atraquen-el-barco.jpg"
+                   autoplay muted loop playsinline preload="metadata" width="390" height="760"
+                   aria-label="Vídeo corto de una partida: pasar el móvil, apostar y subir la apuesta"></video>
+          </div>
+          <div class="project__content">
           <p class="project__kicker">Proyecto propio · Juego web</p>
           <h3>Atraquen el barco</h3>
           <p>
@@ -222,6 +229,7 @@
           <div class="project__links">
             <a href="https://github.com/alejandrodavidmartino/Parenlanave" target="_blank" rel="noopener">Ver código ↗</a>
             <!-- TODO: añadir aquí el enlace a la demo en Render cuando esté publicada -->
+          </div>
           </div>
         </article>
 
