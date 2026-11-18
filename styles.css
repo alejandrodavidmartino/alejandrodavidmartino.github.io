@@ -297,7 +297,9 @@ img, svg { display: block; }
 }
 .project__content { display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 32px; }
 .project__media { border-radius: 14px; overflow: hidden; background: #000; }
-.project__media video { display: block; width: 100%; height: auto; }
+.project__media video, .project__media img { display: block; width: 100%; height: auto; }
+/* Tarjeta sin imagen que ocupa toda la fila, para que no quede un hueco al lado */
+.project--wide { grid-column: 1 / -1; }
 /* Marco de móvil para los vídeos en vertical */
 .project__media--phone {
   width: 230px; border: 6px solid #0a0f1c; border-radius: 26px;
