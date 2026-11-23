@@ -97,3 +97,69 @@ if (!reduceMotion) {
 
 // ---------- Año del pie de página ----------
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ---------- Barra de progreso de lectura ----------
+const progressBar = document.querySelector(".progress");
+function updateProgress() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.setProperty("--p", max > 0 ? window.scrollY / max : 0);
+}
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
+
+// ---------- Palabra que cambia en la portada ----------
+const words = [
+  "APIs con Laravel",
+  "interfaces con React",
+  "backends con Django",
+  "servidores que aguantan",
+  "proyectos con IA",
+];
+const rotatorWord = document.querySelector(".rotator__word");
+if (rotatorWord && !reduceMotion) {
+  let i = 0;
+  setInterval(() => {
+    rotatorWord.classList.add("is-out");
+    setTimeout(() => {
+      i = (i + 1) % words.length;
+      rotatorWord.textContent = words[i];
+      rotatorWord.classList.remove("is-out");
+      rotatorWord.classList.add("is-in");
+      rotatorWord.offsetWidth; // fuerza al navegador a aplicar la posición de entrada
+      rotatorWord.classList.remove("is-in");
+    }, 400);
+  }, 2600);
+}
+
+// ---------- Cifras que cuentan hacia arriba al aparecer ----------
+const counters = document.querySelectorAll("[data-count]");
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    countObserver.unobserve(el);
+    if (reduceMotion) return;
+    const target = Number(el.dataset.count);
+    const suffix = el.dataset.suffix || "";
+    const start = performance.now();
+    const duration = 1200;
+    function tick(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}, { threshold: 0.6 });
+counters.forEach((el) => countObserver.observe(el));
+
+// ---------- Tarjetas que se iluminan siguiendo el ratón ----------
+document.querySelectorAll(".project, .stack__group, .profile, .facts").forEach((card) => {
+  card.classList.add("spot");
+  card.addEventListener("pointermove", (e) => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    card.style.setProperty("--my", `${e.clientY - r.top}px`);
+  });
+});

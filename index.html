@@ -29,6 +29,7 @@
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"></div>
 
   <header class="nav-wrap">
     <nav class="nav" aria-label="Principal">
@@ -52,18 +53,23 @@
   <main id="contenido">
     <!-- PORTADA -->
     <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span><span class="blob blob--2"></span><span class="blob blob--3"></span>
+      </div>
       <div class="hero__text">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Desarrollador Full Stack · Madrid</p>
-        <h1 class="hero__title">Alejandro Martino</h1>
+        <h1 class="hero__title">Hola, soy <span class="grad">Alejandro Martino</span><span class="wave" aria-hidden="true">👋</span></h1>
         <p class="hero__lead">
-          Desarrollo aplicaciones web completas, de la interfaz a la base de datos y el servidor.
+          Construyo
+          <span class="rotator" aria-hidden="true"><span class="rotator__word">APIs con Laravel</span></span>
+          <span class="sr-only">aplicaciones web completas, de la interfaz a la base de datos y el servidor.</span>
         </p>
         <p class="hero__intro">
           Trabajo con PHP/Laravel, React y Python/Django, administro servidores Linux en producción
           y estoy cursando un máster en Desarrollo Full Stack e IA.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--solid" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn--solid" href="#proyectos">Ver proyectos <span class="arrow" aria-hidden="true">→</span></a>
           <a class="btn" href="#contacto">Contactar</a>
           <a class="btn" href="assets/cv-alejandro-martino.pdf" download>Descargar CV</a>
           <a class="icon-btn" href="https://github.com/alejandrodavidmartino" target="_blank" rel="noopener" aria-label="GitHub">
@@ -82,7 +88,21 @@
         <div><dt>Formación</dt><dd>Máster Full Stack e IA (en curso)</dd></div>
         <div><dt>Idiomas</dt><dd>Español nativo · Inglés B2</dd></div>
       </dl>
+
+      <ul class="stats">
+        <li><strong data-count="20" data-suffix="+">20+</strong><span>dominios de clientes en producción</span></li>
+        <li><strong data-count="3" data-suffix=" TB">3 TB</strong><span>de tráfico al mes en mis servidores</span></li>
+        <li><strong data-count="4">4</strong><span>proyectos propios publicados</span></li>
+        <li><strong data-count="3">3</strong><span>stacks: Laravel, React y Django</span></li>
+      </ul>
     </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>PHP</span><span>Laravel</span><span>React</span><span>TypeScript</span><span>Python</span><span>Django</span><span>Node.js</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Tailwind</span><span>Docker</span><span>Linux</span><span>Nginx</span><span>HTMX</span><span>Git</span>
+        <span>PHP</span><span>Laravel</span><span>React</span><span>TypeScript</span><span>Python</span><span>Django</span><span>Node.js</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Tailwind</span><span>Docker</span><span>Linux</span><span>Nginx</span><span>HTMX</span><span>Git</span>
+      </div>
+    </div>
 
     <!-- 01 · SOBRE MÍ -->
     <section class="entry reveal" id="sobre-mi">
@@ -267,23 +287,23 @@
       </header>
       <div class="entry__body stack">
         <div class="stack__group">
-          <h3>Frontend</h3>
+          <h3><span class="chip chip--f" aria-hidden="true"></span>Frontend</h3>
           <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Tailwind CSS</li><li>HTMX</li><li>jQuery</li></ul>
         </div>
         <div class="stack__group">
-          <h3>Backend</h3>
+          <h3><span class="chip chip--b" aria-hidden="true"></span>Backend</h3>
           <ul class="tags"><li>PHP</li><li>Laravel</li><li>Python</li><li>Django</li><li>Node.js</li><li>Java</li><li>WordPress</li></ul>
         </div>
         <div class="stack__group">
-          <h3>Bases de datos</h3>
+          <h3><span class="chip chip--d" aria-hidden="true"></span>Bases de datos</h3>
           <ul class="tags"><li>MySQL</li><li>MariaDB</li><li>PostgreSQL</li><li>MongoDB</li><li>SQLite</li></ul>
         </div>
         <div class="stack__group">
-          <h3>Sistemas</h3>
+          <h3><span class="chip chip--s" aria-hidden="true"></span>Sistemas</h3>
           <ul class="tags"><li>Linux</li><li>Nginx</li><li>Apache</li><li>Plesk</li><li>Docker</li><li>Render</li></ul>
         </div>
         <div class="stack__group">
-          <h3>Flujo de trabajo</h3>
+          <h3><span class="chip chip--w" aria-hidden="true"></span>Flujo de trabajo</h3>
           <ul class="tags"><li>Git</li><li>GitHub</li><li>Postman</li><li>Figma</li><li>pytest</li><li>Ruff</li></ul>
         </div>
       </div>
@@ -329,7 +349,7 @@
         <h2>Contacto</h2>
       </header>
       <div class="entry__body">
-        <p class="contact__big">¿Tienes un proyecto o una vacante? Escríbeme.</p>
+        <p class="contact__big">¿Tienes un proyecto o una vacante? <span class="grad">Hablemos.</span></p>
         <a class="contact__mail" href="mailto:alejandrodavidmartino@gmail.com">alejandrodavidmartino@gmail.com</a>
         <ul class="contact__links">
           <li><a href="https://www.linkedin.com/in/alejandro-martino/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
