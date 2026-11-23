@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alejandro Martino · Desarrollador Full Stack</title>
   <meta name="description" content="Portfolio de Alejandro Martino, desarrollador Full Stack en Madrid: proyectos, experiencia y contacto.">
-  <meta name="theme-color" content="#f4efe4">
+  <meta name="theme-color" content="#fafaf9">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph: la tarjeta que se ve al compartir el enlace en LinkedIn o WhatsApp -->
   <meta property="og:title" content="Alejandro Martino · Desarrollador Full Stack">
-  <meta property="og:description" content="Cuaderno de bitácora: proyectos, experiencia y contacto.">
+  <meta property="og:description" content="Desarrollador Full Stack en Madrid: proyectos, experiencia y contacto.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://alejandrodavidmartino.github.io/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Aplica el tema guardado antes de pintar, para que no haya un parpadeo claro/oscuro -->
   <script>
@@ -32,13 +32,13 @@
 
   <header class="nav-wrap">
     <nav class="nav" aria-label="Principal">
-      <a class="nav__brand" href="#inicio" aria-label="Inicio">AM<span>.</span></a>
+      <a class="nav__brand" href="#inicio" aria-label="Inicio">Alejandro Martino</a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">Menú</button>
       <ul class="nav__links" id="nav-links">
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#travesia">Experiencia</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#herramientas">Stack</a></li>
+        <li><a href="#stack">Stack</a></li>
         <li><a href="#formacion">Formación</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -53,24 +53,17 @@
     <!-- PORTADA -->
     <section class="hero" id="inicio">
       <div class="hero__text">
-        <p class="eyebrow">
-          <span>Cuaderno de bitácora</span>
-          <span class="dot" aria-hidden="true">·</span>
-          <span>Madrid · 40.42° N, 3.70° O</span>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Desarrollador Full Stack · Madrid</p>
+        <h1 class="hero__title">Alejandro Martino</h1>
+        <p class="hero__lead">
+          Desarrollo aplicaciones web completas, de la interfaz a la base de datos y el servidor.
         </p>
-        <p class="hero__name">Alejandro Martino</p>
-        <h1 class="hero__title">
-          Full Stack
-          <em class="highlight">Developer</em>
-        </h1>
-        <p class="hero__lead">De reparar motores a construir aplicaciones web.</p>
         <p class="hero__intro">
-          Desarrollo webs completas, de la interfaz a la base de datos y el servidor.
-          Ahora mismo navego entre PHP/Laravel, React y Python/Django, y estoy cursando
-          un máster en Desarrollo Full Stack e IA.
+          Trabajo con PHP/Laravel, React y Python/Django, administro servidores Linux en producción
+          y estoy cursando un máster en Desarrollo Full Stack e IA.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--solid" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--solid" href="#proyectos">Ver proyectos</a>
           <a class="btn" href="#contacto">Contactar</a>
           <a class="btn" href="assets/cv-alejandro-martino.pdf" download>Descargar CV</a>
           <a class="icon-btn" href="https://github.com/alejandrodavidmartino" target="_blank" rel="noopener" aria-label="GitHub">
@@ -82,49 +75,25 @@
         </div>
       </div>
 
-      <!-- El barquito pixel: cada <rect> es un "píxel" de una cuadrícula de 16x11 -->
-      <div class="hero__boat" aria-hidden="true">
-        <svg class="boat" viewBox="0 0 16 11" shape-rendering="crispEdges">
-          <rect class="b-flag" x="6" y="0" width="2" height="1"/>
-          <rect class="b-mast" x="8" y="0" width="1" height="8"/>
-          <rect class="b-sail" x="9" y="1" width="1" height="1"/>
-          <rect class="b-sail" x="9" y="2" width="2" height="1"/>
-          <rect class="b-sail" x="9" y="3" width="3" height="1"/>
-          <rect class="b-sail" x="9" y="4" width="4" height="1"/>
-          <rect class="b-sail" x="9" y="5" width="5" height="1"/>
-          <rect class="b-sail" x="9" y="6" width="5" height="1"/>
-          <rect class="b-sail2" x="7" y="3" width="1" height="1"/>
-          <rect class="b-sail2" x="6" y="4" width="2" height="1"/>
-          <rect class="b-sail2" x="5" y="5" width="3" height="1"/>
-          <rect class="b-sail2" x="4" y="6" width="4" height="1"/>
-          <rect class="b-deck" x="1" y="7" width="15" height="1"/>
-          <rect class="b-hull" x="2" y="8" width="13" height="1"/>
-          <rect class="b-hull" x="3" y="9" width="11" height="1"/>
-          <rect class="b-hull" x="4" y="10" width="9" height="1"/>
-          <rect class="b-port" x="5" y="8" width="1" height="1"/>
-          <rect class="b-port" x="8" y="8" width="1" height="1"/>
-          <rect class="b-port" x="11" y="8" width="1" height="1"/>
-        </svg>
-        <svg class="waves" viewBox="0 0 400 40" preserveAspectRatio="none">
-          <path d="M0 20 Q25 8 50 20 T100 20 T150 20 T200 20 T250 20 T300 20 T350 20 T400 20 T450 20 T500 20 V40 H0Z"/>
-        </svg>
-        <p class="hero__log">
-          <span>Rumbo</span> Full Stack + IA<br>
-          <span>Puerto</span> EYPASA · Madrid
-        </p>
-      </div>
+      <dl class="profile" aria-label="Resumen">
+        <div><dt>Ahora</dt><dd>Desarrollador Full Stack en EYPASA</dd></div>
+        <div><dt>Ubicación</dt><dd>Madrid, España</dd></div>
+        <div><dt>Stack principal</dt><dd>Laravel · React · Django</dd></div>
+        <div><dt>Formación</dt><dd>Máster Full Stack e IA (en curso)</dd></div>
+        <div><dt>Idiomas</dt><dd>Español nativo · Inglés B2</dd></div>
+      </dl>
     </section>
 
-    <!-- ENTRADA 01 · SOBRE MÍ -->
+    <!-- 01 · SOBRE MÍ -->
     <section class="entry reveal" id="sobre-mi">
       <header class="entry__head">
-        <p class="entry__num">Entrada 01</p>
+        <p class="entry__num">01</p>
         <h2>Sobre mí</h2>
       </header>
       <div class="entry__body about">
         <div class="about__text">
           <p class="about__big">
-            Empecé arreglando <em>máquinas</em> y acabé construyendo <em>software</em>.
+            Empecé arreglando máquinas y acabé construyendo software.
           </p>
           <p>
             Me formé en Mecatrónica Industrial y trabajé en mantenimiento electromecánico:
@@ -139,19 +108,19 @@
           </p>
         </div>
         <ul class="facts">
-          <li><span class="facts__k">01</span><strong>Full Stack</strong> PHP/Laravel, React y Django: de la interfaz al servidor.</li>
-          <li><span class="facts__k">02</span><strong>Sistemas</strong> Linux, Nginx/Apache y Plesk, en producción real.</li>
-          <li><span class="facts__k">03</span><strong>Método</strong> Tests, staging antes de producción y Git con pull requests.</li>
-          <li><span class="facts__k">04</span><strong>Idiomas</strong> Inglés B2: trabajé un tiempo en Dublín.</li>
+          <li><strong>Full Stack</strong> PHP/Laravel, React y Django: de la interfaz al servidor.</li>
+          <li><strong>Sistemas</strong> Linux, Nginx/Apache y Plesk, en producción real.</li>
+          <li><strong>Método</strong> Tests, staging antes de producción y Git con pull requests.</li>
+          <li><strong>Idiomas</strong> Inglés B2: trabajé un tiempo en Dublín.</li>
         </ul>
       </div>
     </section>
 
-    <!-- ENTRADA 02 · EXPERIENCIA -->
-    <section class="entry reveal" id="travesia">
+    <!-- 02 · EXPERIENCIA -->
+    <section class="entry reveal" id="experiencia">
       <header class="entry__head">
-        <p class="entry__num">Entrada 02</p>
-        <h2>La travesía</h2>
+        <p class="entry__num">02</p>
+        <h2>Experiencia</h2>
       </header>
       <ol class="entry__body timeline">
         <li class="job">
@@ -198,10 +167,10 @@
       </ol>
     </section>
 
-    <!-- ENTRADA 03 · PROYECTOS -->
+    <!-- 03 · PROYECTOS -->
     <section class="entry reveal" id="proyectos">
       <header class="entry__head">
-        <p class="entry__num">Entrada 03</p>
+        <p class="entry__num">03</p>
         <h2>Proyectos</h2>
       </header>
       <div class="entry__body projects">
@@ -219,8 +188,7 @@
           <h3>Atraquen el barco</h3>
           <p>
             Juego de fiesta por turnos para jugar con amigos desde un solo móvil: sale una pregunta
-            con respuesta numérica y la tripulación sube la apuesta sin pasarse. Quien apuesta más
-            alto es el capitán.
+            con respuesta numérica y los jugadores suben la apuesta por turnos sin pasarse.
           </p>
           <ul class="project__points">
             <li>Motor de reglas en Python puro, separado de Django y cubierto por tests.</li>
@@ -291,40 +259,40 @@
       </div>
     </section>
 
-    <!-- ENTRADA 04 · STACK -->
-    <section class="entry reveal" id="herramientas">
+    <!-- 04 · STACK -->
+    <section class="entry reveal" id="stack">
       <header class="entry__head">
-        <p class="entry__num">Entrada 04</p>
-        <h2>Herramientas a bordo</h2>
+        <p class="entry__num">04</p>
+        <h2>Stack</h2>
       </header>
       <div class="entry__body stack">
         <div class="stack__group">
-          <h3><span>A</span> Frontend</h3>
+          <h3>Frontend</h3>
           <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Tailwind CSS</li><li>HTMX</li><li>jQuery</li></ul>
         </div>
         <div class="stack__group">
-          <h3><span>B</span> Backend</h3>
+          <h3>Backend</h3>
           <ul class="tags"><li>PHP</li><li>Laravel</li><li>Python</li><li>Django</li><li>Node.js</li><li>Java</li><li>WordPress</li></ul>
         </div>
         <div class="stack__group">
-          <h3><span>C</span> Bases de datos</h3>
+          <h3>Bases de datos</h3>
           <ul class="tags"><li>MySQL</li><li>MariaDB</li><li>PostgreSQL</li><li>MongoDB</li><li>SQLite</li></ul>
         </div>
         <div class="stack__group">
-          <h3><span>D</span> Sistemas</h3>
+          <h3>Sistemas</h3>
           <ul class="tags"><li>Linux</li><li>Nginx</li><li>Apache</li><li>Plesk</li><li>Docker</li><li>Render</li></ul>
         </div>
         <div class="stack__group">
-          <h3><span>E</span> Flujo de trabajo</h3>
+          <h3>Flujo de trabajo</h3>
           <ul class="tags"><li>Git</li><li>GitHub</li><li>Postman</li><li>Figma</li><li>pytest</li><li>Ruff</li></ul>
         </div>
       </div>
     </section>
 
-    <!-- ENTRADA 05 · FORMACIÓN -->
+    <!-- 05 · FORMACIÓN -->
     <section class="entry reveal" id="formacion">
       <header class="entry__head">
-        <p class="entry__num">Entrada 05</p>
+        <p class="entry__num">05</p>
         <h2>Formación</h2>
       </header>
       <div class="entry__body studies">
@@ -354,14 +322,14 @@
       </div>
     </section>
 
-    <!-- ENTRADA 06 · CONTACTO -->
+    <!-- 06 · CONTACTO -->
     <section class="entry contact reveal" id="contacto">
       <header class="entry__head">
-        <p class="entry__num">Entrada 06</p>
-        <h2>Tierra a la vista</h2>
+        <p class="entry__num">06</p>
+        <h2>Contacto</h2>
       </header>
       <div class="entry__body">
-        <p class="contact__big">¿Hablamos? <em>Escríbeme</em> y te respondo.</p>
+        <p class="contact__big">¿Tienes un proyecto o una vacante? Escríbeme.</p>
         <a class="contact__mail" href="mailto:alejandrodavidmartino@gmail.com">alejandrodavidmartino@gmail.com</a>
         <ul class="contact__links">
           <li><a href="https://www.linkedin.com/in/alejandro-martino/" target="_blank" rel="noopener">LinkedIn ↗</a></li>

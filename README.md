@@ -8,7 +8,7 @@ Está hecho a mano con HTML, CSS y JavaScript, sin frameworks ni herramientas de
 
 - `index.html`: el contenido de la página.
 - `styles.css`: el diseño, con modo claro y oscuro y adaptado a móvil.
-- `script.js`: el cambio de tema, el menú en móvil y las animaciones al hacer scroll.
+- `script.js`: el cambio de tema, el menú en móvil, las animaciones al hacer scroll y los vídeos de los proyectos.
 - `assets/`: el CV en PDF y el favicon.
 
 ## Ver en local
